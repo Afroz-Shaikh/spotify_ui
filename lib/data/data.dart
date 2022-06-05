@@ -41,9 +41,9 @@ class Song {
 const _lofihiphopMusic = [
   Song(
     id: '0',
-    title: 'Snowman',
-    artist: 'WYS',
-    album: '1 Am. Study Session',
+    title: 'Peaches',
+    artist: 'Justin Bieber',
+    album: 'Peaches',
     duration: '3:15',
   ),
   Song(

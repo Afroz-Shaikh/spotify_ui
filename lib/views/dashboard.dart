@@ -14,7 +14,7 @@ class DashBoard extends StatelessWidget {
               Container(
                 width: 280,
                 height: double.infinity,
-                color: Colors.green,
+                color: Colors.amber,
               ),
               //PLaylist
             ],
@@ -22,7 +22,7 @@ class DashBoard extends StatelessWidget {
           Container(
             height: 84,
             width: double.infinity,
-            color: Colors.blue,
+            color: Colors.red,
           )
         ],
       ),
