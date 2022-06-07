@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:spotify/data/data.dart';
+import 'views.dart';
+
+import '../widgets/widgets.dart';
 
 class DashBoard extends StatelessWidget {
   const DashBoard({Key? key}) : super(key: key);
@@ -11,18 +15,19 @@ class DashBoard extends StatelessWidget {
           Expanded(
               child: Row(
             children: [
-              Container(
-                width: 280,
-                height: double.infinity,
-                color: Colors.amber,
+              SideMenu(),
+              Expanded(
+                child: PlayListScreen(
+                  playlist: lofihiphopPlaylist,
+                ),
               ),
-              //PLaylist
+              //PLaylist -->
             ],
           )),
           Container(
             height: 84,
             width: double.infinity,
-            color: Colors.red,
+            color: Colors.blue,
           )
         ],
       ),
