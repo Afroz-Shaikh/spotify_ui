@@ -149,11 +149,11 @@ class Playlist {
 
 const lofihiphopPlaylist = Playlist(
   id: '5-playlist',
-  name: 'lofi hip hop music - beats to relax/study to',
-  imageURL: 'assets/lofigirl.jpg',
+  name: 'lofi hip hop music',
+  imageURL: 'assets/asset01.png',
   description:
       'A daily selection of chill beats - perfect to help you relax & study 📚',
-  creator: 'Lofi Girl',
+  creator: 'Shaikh Afroz',
   duration: '28 min',
   followers: '5,351,685',
   songs: _lofihiphopMusic,
