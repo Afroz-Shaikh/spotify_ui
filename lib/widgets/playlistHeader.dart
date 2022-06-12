@@ -86,7 +86,26 @@ class _PlayListButton extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20))),
           onPressed: () {},
           child: Text('PLAY'),
-        )
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.favorite_border),
+          iconSize: 30,
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.more_horiz),
+          iconSize: 30,
+        ),
+        const Spacer(),
+        Text(
+          'FOLLOWERS\n$followers',
+          style: Theme.of(context).textTheme.overline!.copyWith(fontSize: 12),
+          textAlign: TextAlign.right,
+        ),
       ],
     );
   }
