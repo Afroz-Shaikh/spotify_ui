@@ -1,7 +1,10 @@
 import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:desktop_window/desktop_window.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:spotify/model/current_song.dart';
 
 import 'views/dashboard.dart';
 
@@ -10,7 +13,8 @@ void main() async {
   if (!kIsWeb && (Platform.isMacOS || Platform.isLinux || Platform.isWindows)) {
     await DesktopWindow.setMinWindowSize(const Size(600, 800));
   }
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(
+      create: (context) => CurrentSongModel(), child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
