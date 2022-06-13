@@ -85,7 +85,7 @@ class _PlayListButton extends StatelessWidget {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20))),
           onPressed: () {},
-          child: Text('PLAY'),
+          child: Tooltip(message: 'Play This Playlist', child: Text('PLAY')),
         ),
         const SizedBox(
           width: 8,
@@ -101,10 +101,13 @@ class _PlayListButton extends StatelessWidget {
           iconSize: 30,
         ),
         const Spacer(),
-        Text(
-          'FOLLOWERS\n$followers',
-          style: Theme.of(context).textTheme.overline!.copyWith(fontSize: 12),
-          textAlign: TextAlign.right,
+        Tooltip(
+          message: 'Followers for this playlist',
+          child: Text(
+            'FOLLOWERS\n$followers',
+            style: Theme.of(context).textTheme.overline!.copyWith(fontSize: 12),
+            textAlign: TextAlign.right,
+          ),
         ),
       ],
     );
