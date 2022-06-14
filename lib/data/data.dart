@@ -69,8 +69,8 @@ const _lofihiphopMusic = [
   ),
   Song(
     id: '4',
-    title: 'Winter Sun',
-    artist: 'Bcalm, Banks',
+    title: 'Mood (feat. iann dior)',
+    artist: '24K',
     album: 'Feelings',
     duration: '2:15',
   ),

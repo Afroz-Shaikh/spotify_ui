@@ -78,7 +78,7 @@ Color _getDataRowColor(Set<MaterialState> states) {
   };
 
   if (states.any(interactiveStates.contains)) {
-    return Colors.blueGrey;
+    return Colors.greenAccent.withOpacity(0.3);
   }
   //return Colors.green; // Use the default value.
   return Colors.transparent;
