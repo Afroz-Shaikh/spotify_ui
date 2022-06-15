@@ -17,10 +17,78 @@ class NowPlaying extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Row(
-          children: [_NowPlayingInfo(), _playingControls()],
+          children: [
+            _NowPlayingInfo(),
+            Spacer(),
+            _playingControls(),
+            Spacer(),
+            if (MediaQuery.of(context).size.width > 1000) _ControlsMore()
+          ],
         ),
       ),
     );
+  }
+}
+
+class _ControlsMore extends StatelessWidget {
+  const _ControlsMore({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        IconButton(
+            onPressed: () {},
+            iconSize: 20,
+            icon: Icon(
+              Icons.devices_outlined,
+            )),
+        Row(
+          children: [
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.volume_down),
+            ),
+            v_slider(),
+          ],
+        ),
+        IconButton(
+            onPressed: () {},
+            iconSize: 20,
+            icon: Icon(
+              Icons.fullscreen_outlined,
+            )),
+      ],
+    );
+  }
+}
+
+class v_slider extends StatefulWidget {
+  const v_slider({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  State<v_slider> createState() => _v_sliderState();
+}
+
+class _v_sliderState extends State<v_slider> {
+  double volume = 1;
+
+  @override
+  Widget build(BuildContext context) {
+    return Slider(
+        min: 1,
+        max: 10,
+        thumbColor: Colors.green,
+        activeColor: Colors.green,
+        inactiveColor: Colors.grey,
+        value: volume.toDouble(),
+        onChanged: (value) {
+          setState(() {
+            volume = value;
+          });
+        });
   }
 }
 
@@ -125,12 +193,19 @@ class _playingControls extends StatelessWidget {
             ),
             Container(
               decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [Colors.red, Colors.green]),
-              ),
+                  // gradient: LinearGradient(colors: [Colors.red, Colors.green]),
+                  color: Colors.grey[800],
+                  borderRadius: BorderRadius.circular(2.5)),
               height: 5,
               width: MediaQuery.of(context).size.width * 0.3,
             ),
-            Text(selected!.duration)
+            const SizedBox(
+              width: 8,
+            ),
+            Text(
+              selected?.duration ?? '0:00',
+              style: Theme.of(context).textTheme.caption,
+            )
           ],
         )
       ],

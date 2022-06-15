@@ -15,7 +15,7 @@ class DashBoard extends StatelessWidget {
           Expanded(
               child: Row(
             children: [
-              SideMenu(),
+              if (MediaQuery.of(context).size.width > 1000) SideMenu(),
               Expanded(
                 child: PlayListScreen(
                   playlist: lofihiphopPlaylist,

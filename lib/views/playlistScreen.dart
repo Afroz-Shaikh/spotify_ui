@@ -61,7 +61,7 @@ class _PlayListScreenState extends State<PlayListScreen> {
             width: 20,
           ),
         ],
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.black87,
         leading: Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: 16,
