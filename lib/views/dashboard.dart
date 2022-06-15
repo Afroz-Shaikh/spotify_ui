@@ -24,11 +24,7 @@ class DashBoard extends StatelessWidget {
               //PLaylist -->
             ],
           )),
-          Container(
-            height: 84,
-            width: double.infinity,
-            color: Colors.blue,
-          )
+          NowPlaying(),
         ],
       ),
     );
