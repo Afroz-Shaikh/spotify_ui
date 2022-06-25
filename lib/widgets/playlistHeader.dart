@@ -18,7 +18,7 @@ class PlayListHeader extends StatelessWidget {
               width: 200,
               fit: BoxFit.cover,
             ),
-            SizedBox(
+            const SizedBox(
               width: 16,
             ),
             Expanded(
@@ -32,21 +32,21 @@ class PlayListHeader extends StatelessWidget {
                       .overline!
                       .copyWith(fontSize: 12),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 12,
                 ),
                 Text(
                   playList.name,
                   style: Theme.of(context).textTheme.headline2,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Text(
                   playList.description,
                   style: Theme.of(context).textTheme.subtitle1,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Text(

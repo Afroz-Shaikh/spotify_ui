@@ -40,24 +40,24 @@ class _PlayListScreenState extends State<PlayListScreen> {
               style: TextButton.styleFrom(
                   primary: Theme.of(context).iconTheme.color),
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.account_circle_outlined,
                 size: 30,
               ),
-              label: Text(
+              label: const Text(
                 'Shaikh Afroz',
                 style: TextStyle(),
               )),
-          SizedBox(
+          const SizedBox(
             width: 8,
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.keyboard_arrow_down,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
         ],
@@ -73,25 +73,25 @@ class _PlayListScreenState extends State<PlayListScreen> {
                   onTap: () {},
                   customBorder: const CircleBorder(),
                   child: Container(
-                    padding: EdgeInsets.all(6),
-                    decoration: BoxDecoration(
+                    padding: const EdgeInsets.all(6),
+                    decoration: const BoxDecoration(
                         color: Colors.black26, shape: BoxShape.circle),
-                    child: Icon(
+                    child: const Icon(
                       Icons.chevron_left,
                       size: 28,
                     ),
                   )),
-              SizedBox(
+              const SizedBox(
                 width: 15,
               ),
               InkWell(
                   onTap: () {},
                   customBorder: const CircleBorder(),
                   child: Container(
-                    padding: EdgeInsets.all(6),
-                    decoration: BoxDecoration(
+                    padding: const EdgeInsets.all(6),
+                    decoration: const BoxDecoration(
                         color: Colors.black26, shape: BoxShape.circle),
-                    child: Icon(
+                    child: const Icon(
                       Icons.chevron_right,
                       size: 28,
                     ),
@@ -107,8 +107,8 @@ class _PlayListScreenState extends State<PlayListScreen> {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-              // Color(0xffE5DBBD),
-              Color(0xff3A3A3A),
+              // Color(0xffE5DBBD),const
+              const Color(0xff3A3A3A),
               Theme.of(context).backgroundColor
             ],
                 stops: const [
